@@ -8,8 +8,10 @@ import SlideItem from "./SliderItem";
 export const renderSlide = ({ id, ...rest }: Slide, idx: number) => (
   <SlideItem {...rest} key={`${id}-slideContent-${idx}`} width={1} />
 );
-
-const Slider: FC<SliderProps> = ({
+/**********************************************************
+ * Componente Slider que se muestra en pantalla
+ */
+const Slider: FC<SliderProps> = ({ //Se cargan las props
   hasImage,
   useImageAsTag,
   imageUrl,
@@ -18,8 +20,7 @@ const Slider: FC<SliderProps> = ({
   ...styles
 }) => {
   const data = generateSlides({ id, hasImage, useImageAsTag, imageUrl});
- console.log('data:', data);
- console.log('params: ', params);
+
   return (
     <SlideContainer {...styles} id={id}>
       <Swiper {...params}>{data.map(renderSlide)}</Swiper>

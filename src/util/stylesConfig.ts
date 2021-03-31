@@ -1,12 +1,14 @@
 import { theme as defaultTheme, normalize } from "@react-yuki/ui";
 import { css } from "@emotion/core";
-
-export const colors = {
+/*****************************************************
+ * Se declaran los estilos principales del componente en forma de texto css
+ */
+export const colors = { //Se declaran los temas
   ...defaultTheme.colors,
   dark: "#333333",
   lightGray: "#ebebeb",
   darkGray: "#333435",
-  black: '#000000'
+  black: '#000000' //Este es el tema utilizado
 };
 
 export const swiperStyle = css`
@@ -60,8 +62,10 @@ export const swiperStyle = css`
     height: 100%;
     position: relative;
     transition-property: transform;
-    border-radius: 15px;
+    border-radius: 5px;
     background-size: cover;
+    background-origin: content-box;
+    position: relative;
   }
 
   .swiper-slide-invisible-blank {
@@ -541,7 +545,7 @@ export const globalStyles = css`
 
   html,
   body {
-    background-color: ${colors.black};
+    background-color: ${colors.black}; 
     font-family: ${defaultTheme.fonts.base};
     color: ${colors.gray[8]};
     font-size: 16px;

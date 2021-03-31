@@ -1,3 +1,7 @@
+/*****************************************************
+ * Todas las imagenes se importan del repositorio local 
+ * que se encuntra en "assets"
+ */
 import Img1 from '../assets/comida1.jpg';
 import Img2 from '../assets/comida2.jpg';
 import Img3 from '../assets/comida3.jpg';
@@ -17,6 +21,10 @@ import Img16 from '../assets/comida7.jpg';
 import Img17 from '../assets/comida8.jpg';
 import Img18 from '../assets/comida9.jpg';
 
+/*************************************************************
+ * Se declaran los Item a traves de un array de objetos con las 
+ * siguientes propiedades
+ */
 export const items = [
   {
     src: Img1,

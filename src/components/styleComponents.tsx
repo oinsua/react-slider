@@ -1,6 +1,9 @@
 import React, { FC } from "react";
 import { Flex, FlexProps } from "@react-yuki/ui";
 
+/********************************************************
+ * Estilos principales del componente Slider
+ */
 export const SlideContainer: FC<FlexProps> = props => (
   <Flex
     {...props}
@@ -8,7 +11,7 @@ export const SlideContainer: FC<FlexProps> = props => (
       position: "relative",
       ".swiper-container": { // Ancho y altura de la pantalla show
         width: "100%",
-        height: "8rem", //Antes era 20rem
+        height: "7rem", //Antes era 20rem
       },
       ".swiper-pagination": {
         "&.swiper-pagination-fraction": {

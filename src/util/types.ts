@@ -2,9 +2,13 @@ import { ReactNode } from "react";
 import { FlexProps } from "@react-yuki/ui";
 import { ReactIdSwiperProps } from "react-id-swiper";
 
+/********************************************************************
+ * Se declaran las interfacez que se van a utilizar en el componente
+ */
 interface SlideGeneratorOption { //Interfaz de con las propiedades correspondientes
   id?: string;
   content?: string;
+  from?: string;
   imageUrl?: string;
   hasImage?: boolean;
   useImageAsTag?: boolean;
@@ -12,9 +16,10 @@ interface SlideGeneratorOption { //Interfaz de con las propiedades correspondien
 
 export type GenerateSlides = (params: SlideGeneratorOption) => Slide[];
 
-export interface Slide {
+export interface Slide { //Interfaz para definir las propiedades del Slider
   id?: string;
   fill?: string;
+  from?: string;
   content: string;
   customContent?: ReactNode;
   imageUrl?: string;

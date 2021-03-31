@@ -1,21 +1,22 @@
 import React, { FC } from "react";
 import { Flex, Box, Heading, Image, theme } from "@react-yuki/ui";
 import { SlideProps } from "../util/types";
-
-const Slide: FC<SlideProps> = ({
+/**********************************************************
+ * Se crea el componente SliderItem para agregarlo al slider
+ */
+const Slide: FC<SlideProps> = ({ //Se cargan las props de la interfaz
   imageUrl,
   fill,
   content,
+  from,
   customContent,
   useImageAsTag,
   ...styles
 }) => {  
-  console.log('imgurl:', imageUrl);
-  console.log('fill:', fill);
-  console.log('content:', content);
-  console.log('customContent:', customContent);
-  console.log('useImage:', useImageAsTag);
-  console.log('content:', content);
+  /*************************************************************
+   * Se crean los estilos principales del Slider y se asigna la imagen
+   * como background del Slider en la propiedad imageUrl.
+   */
   const slideStyles = {
     ...styles,
     bg: customContent ? "" : fill,
@@ -27,16 +28,29 @@ const Slide: FC<SlideProps> = ({
   };
 
   let renderedContent = (
-    <Heading
-      fontWeight={600}
-      fontSize={20}
-      color="white"
-      textAlign="center"
-    >
-      {content}
-    </Heading>
+    /***********************************************
+     * Aqui se muestra el contenido texto dentro de 
+     * la imagen en una etiqueta <h2></h2>
+     * Se muestra ademas el contenido texto fuera de la 
+     * imagen en un div
+     */
+    <>
+      <Heading 
+        fontWeight={600}
+        fontSize={20}
+        color="white"
+        textAlign="center"
+      >
+        {content}
+      </Heading>
+      <Box className="swiper-text">
+        {from}
+      </Box>
+    </>
   );
-
+/*************************************************************
+ * En caso de que no se pueda cargar los contenidos anteriores
+ */
   if (!imageUrl) {
     renderedContent = <></>;
     if (useImageAsTag) {
@@ -51,11 +65,11 @@ const Slide: FC<SlideProps> = ({
     renderedContent = <>{customContent}</>;
   }
 
-  return (
+  return ( //Se muestra el SliderItem dentro de un componente Flex
     <Flex
       justifyContent="center"
       alignItems="center"
-      height="8rem"  //Altura del Container-Imagen
+      height="5rem"  //Altura del Container-Imagen
       {...slideStyles}
     >
       {renderedContent}
