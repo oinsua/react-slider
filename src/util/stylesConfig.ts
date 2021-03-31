@@ -62,7 +62,7 @@ export const swiperStyle = css`
     height: 100%;
     position: relative;
     transition-property: transform;
-    border-radius: 5px;
+    border-radius: 4px;
     background-size: cover;
     background-origin: content-box;
     position: relative;
