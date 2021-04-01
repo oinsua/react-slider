@@ -2,7 +2,6 @@ import React from "react";
 import {ThemeProvider } from '@emotion/react'
 import { theme, globalStyles } from "./utils/stylesConfig";
 import { Global } from "@emotion/core";
-import { Box} from "@react-yuki/ui";
 import Slider from "./pages/Slider";
 import './App.css'; 
 
