@@ -74,7 +74,7 @@ const Slide = ({ //Se cargan las props de la interfaz
     <Flex
       justifyContent="center"
       alignItems="center"
-      height="60px"  //Altura del Container-Imagen  5rem
+      height="70px"  //Altura del Container-Imagen  5rem
       {...slideStyles}
       onDoubleClick={() => handleClick(content)}
     >

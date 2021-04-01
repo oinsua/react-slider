@@ -15,13 +15,15 @@ export const swiperStyle = css`
   /* stylelint-disable */
 
   .swiper-container {
-    margin: 0 auto;
+    margin: 5px 5px;
     position: relative;
     overflow: hidden;
     list-style: none;
     padding: 0;
     /* Fix of Webkit flickering */
     z-index: 1;
+    max-width: 500px;
+    min-width: 320px; 
   }
 
   .swiper-container-no-flexbox .swiper-slide {
