@@ -1,10 +1,10 @@
 import React from "react";
 import {ThemeProvider } from '@emotion/react'
-import { theme, globalStyles } from "./util/stylesConfig";
+import { theme, globalStyles } from "./utils/stylesConfig";
 import { Global } from "@emotion/core";
 import { Box, Heading } from "@react-yuki/ui";
-import Slider from "./components/Slider";
-import './App.css'
+import Slider from "./pages/Slider";
+import './App.css'; 
 
 const App = () => (
   <ThemeProvider theme={theme}>
@@ -21,22 +21,54 @@ const App = () => (
             fontWeight={1}
             textAlign="center"
           >
-          <div className="App-header"> 
-           <span className="title-span">CABBAGE STEAMENED FISH WITH MISO</span>
-           <span className="title-span">HOLLANDAISE</span>
-          </div>
+          
           </Heading>
         </Box>
         <Box>
           <Slider
-            params={{
-              slidesPerView: 2.5, //Cantidad de diapositivas en show
-              spaceBetween: 10, //Espacio entre diapositivas
+            params={{ 
+              spaceBetween: 12, //Espacio entre diapositivas
+              grabCursor: true,
               pagination: {
                 el: ".swiper-pagination",
                 clickable: true
-              }
-            }}
+              },
+              on: { 
+                /* init: function () {
+                  console.log('swiper initialized');
+                }, */
+                /* click: function () {
+                  console.log('haz hecho un clic')
+                  
+                } */
+                /* tap: function () {
+                  console.log('haz hecho un clic')
+                } */
+              },
+              /**************************************************
+               * Agregar puntos de ruptura segun la el tipo de resolucion
+               *  del dispositivo. Existe otra variante para el ratio 
+               * en swiper-api.
+               */
+              breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 12
+                },
+                // when window width is >= 480px
+                480: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 15
+                },
+                // when window width is >= 640px
+                640: {
+                  slidesPerView: 4.5,
+                  spaceBetween: 20
+                }
+              },
+            }
+          }
           />
         </Box>
       </Box>

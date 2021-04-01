@@ -58,7 +58,7 @@ export const swiperStyle = css`
 
   .swiper-slide {
     flex-shrink: 0;
-    width: 100%;
+    width: 117px;
     height: 100%;
     position: relative;
     transition-property: transform;

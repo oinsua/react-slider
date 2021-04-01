@@ -1,17 +1,16 @@
-import React, { FC } from "react";
+import React from "react";
 import Swiper from "react-id-swiper";
-import { generateSlides } from "../util/utils";
+import { generateSlides } from "../utils/utils";
 import { SlideContainer } from "./styleComponents";
-import { SliderProps, Slide } from "../util/types";
 import SlideItem from "./SliderItem";
 
-export const renderSlide = ({ id, ...rest }: Slide, idx: number) => (
+export const renderSlide = ({ id, ...rest }, idx) => (
   <SlideItem {...rest} key={`${id}-slideContent-${idx}`} width={1} />
 );
 /**********************************************************
  * Componente Slider que se muestra en pantalla
  */
-const Slider: FC<SliderProps> = ({ //Se cargan las props
+const Slider = ({ //Se cargan las props
   hasImage,
   useImageAsTag,
   imageUrl,

@@ -1,15 +1,15 @@
-import React, { FC } from "react";
+import React from "react";
 import { Flex, Box, Heading, Image, theme } from "@react-yuki/ui";
-import { SlideProps } from "../util/types";
 /**********************************************************
  * Se crea el componente SliderItem para agregarlo al slider
  */
-const Slide: FC<SlideProps> = ({ //Se cargan las props de la interfaz
+const Slide = ({ //Se cargan las props de la interfaz
   imageUrl,
   fill,
   content,
   from,
   customContent,
+  on,
   useImageAsTag,
   ...styles
 }) => {  
@@ -27,6 +27,11 @@ const Slide: FC<SlideProps> = ({ //Se cargan las props de la interfaz
       })
   };
 
+  const handleClick = (content) => {
+    console.log('DoubleCkic');
+    alert(`Este es un click de ${content}`);
+  }
+  
   let renderedContent = (
     /***********************************************
      * Aqui se muestra el contenido texto dentro de 
@@ -56,7 +61,7 @@ const Slide: FC<SlideProps> = ({ //Se cargan las props de la interfaz
     if (useImageAsTag) {
       renderedContent = (
         <>
-          <Image alt="img" data-src={imageUrl} className="swiper-lazy" />
+          <Image alt="img" src={imageUrl} className="swiper-lazy" />
           <Box className="swiper-lazy-preloader swiper-lazy-preloader-white" />
         </>
       );
@@ -69,8 +74,9 @@ const Slide: FC<SlideProps> = ({ //Se cargan las props de la interfaz
     <Flex
       justifyContent="center"
       alignItems="center"
-      height="5rem"  //Altura del Container-Imagen
+      height="60px"  //Altura del Container-Imagen  5rem
       {...slideStyles}
+      onDoubleClick={() => handleClick(content)}
     >
       {renderedContent}
     </Flex>

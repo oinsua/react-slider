@@ -1,13 +1,10 @@
-import { GenerateSlides } from "./types";
 import { theme } from "./stylesConfig";
-import { Colors } from "./types";
 import {items} from './Items';
 /**************************************************************
  * Componente que se encarga de retornar un los objetos
- * que conformaran la informcion del SliderItem. 
+ * que conformaran la informacion del SliderItem. 
  */
-export const generateSlides: GenerateSlides = options => {
-  const { id} = options;
+export const generateSlides = () => {
  /***************************************************************
   * Se define un color de fondo para cada foto en caso de que 
   * no se muestre correctamente en la pantalla
@@ -33,14 +30,14 @@ export const generateSlides: GenerateSlides = options => {
     "cyan"
   ];
 
-  const colors: Colors = theme.colors;
+  const colors = theme.colors;
   let counter = 0; //Contador para iterar los Item
   /************************************************************
    * Se desarrolla un ciclo donde se van retonando los objetos 
    * con todas las propiedades del sliderItem
    */
-  return colorList.map((colorName: string, idx: number) => ({
-    id,
+  return colorList.map((colorName, idx) => ({
+    id: idx,
     content: items[counter].altText, //Texto que se muestra sobre la imagen
     from: items[counter].caption, //Texto que se muestra fuera de la imagen
     fill: colors[colorName][4], //Color de fondo en caso de que no se muestre la imagen
