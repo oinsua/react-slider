@@ -33,14 +33,54 @@ const App = () => (
                     slidesPerView: 2.76,
                     spaceBetween: 12,
                   },
+                  // when window width is >= 390px
+                  390: {
+                    slidesPerView: 2.88,
+                    spaceBetween: 12,
+                  },
                   // when window width is >= 414px
                   414: {
                     slidesPerView: 3.08,
                     spaceBetween: 12,
                   },
+                  // when window width is >= 430px
+                   430: {
+                    slidesPerView: 3.18,
+                    spaceBetween: 12,
+                  },
+                  // when window width is >= 440px
+                  440: {
+                    slidesPerView: 3.24,
+                    spaceBetween: 12,
+                  },
+                  // when window width is >= 450px
+                  450: {
+                    slidesPerView: 3.3,
+                    spaceBetween: 12,
+                  },
+                  // when window width is >= 460px
+                  460: {
+                    slidesPerView: 3.4,
+                    spaceBetween: 12,
+                  },
+                  // when window width is >= 470px
+                  470: {
+                    slidesPerView: 3.47,
+                    spaceBetween: 12,
+                  },
                   // when window width is >= 480px
                   480: {
-                    slidesPerView: 4,
+                    slidesPerView: 3.54,
+                    spaceBetween: 12
+                  },
+                  // when window width is >= 490px
+                  490: {
+                    slidesPerView: 3.62,
+                    spaceBetween: 12
+                  },
+                  // when window width is >= 500px
+                  500: {
+                    slidesPerView: 3.69,
                     spaceBetween: 12
                   }
               },
@@ -52,23 +92,3 @@ const App = () => (
 );
 
 export default App;
-
-
-/* import React from 'react';
-import './App.css';
-import MutipleSlidesPerView from './components/MultipDiap.js/MultipDiap.js';
- 
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <span className="title-span">CABBAGE STEAMENED FISH WITH MISO</span>
-        <span className="title-span">HOLLANDAISE</span>
-        <MutipleSlidesPerView />
-      </header>
-    </div>
-  );
-}
-
-export default App; */

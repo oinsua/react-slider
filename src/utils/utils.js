@@ -36,8 +36,8 @@ export const generateSlides = () => {
    * Se desarrolla un ciclo donde se van retonando los objetos 
    * con todas las propiedades del sliderItem
    */
-  return colorList.map((colorName, idx) => ({
-    id: idx,
+  return colorList.map((colorName) => ({
+    id: counter,
     content: items[counter].altText, //Texto que se muestra sobre la imagen
     from: items[counter].caption, //Texto que se muestra fuera de la imagen
     fill: colors[colorName][4], //Color de fondo en caso de que no se muestre la imagen

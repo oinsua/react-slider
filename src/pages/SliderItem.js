@@ -3,7 +3,7 @@ import { Flex, Box, Heading, Image, theme } from "@react-yuki/ui";
 /**********************************************************
  * Se crea el componente SliderItem para agregarlo al slider
  */
-const Slide = ({ //Se cargan las props de la interfaz
+const SlideItem = ({ //Se cargan las props de la interfaz
   imageUrl,
   fill,
   content,
@@ -26,11 +26,6 @@ const Slide = ({ //Se cargan las props de la interfaz
         backgroundRepeat: "no-repeat"
       })
   };
-
-  const handleClick = (content) => {
-    console.log('DoubleCkic');
-    alert(`Este es un click de ${content}`);
-  }
   
   let renderedContent = (
     /***********************************************
@@ -76,17 +71,16 @@ const Slide = ({ //Se cargan las props de la interfaz
       alignItems="center"
       height="70px"  //Altura del Container-Imagen  5rem
       {...slideStyles}
-      onDoubleClick={() => handleClick(content)}
     >
       {renderedContent}
     </Flex>
   );
 };
 
-Slide.defaultProps = {
+SlideItem.defaultProps = {
   fill: theme.colors.gray[2]
 };
 
-Slide.displayName = "Slide";
+SlideItem.displayName = "Slide";
 
-export default Slide;
+export default SlideItem;

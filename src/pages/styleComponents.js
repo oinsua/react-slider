@@ -11,7 +11,7 @@ export const SlideContainer = props => (
       position: "relative",
       ".swiper-container": { // Ancho y altura de la pantalla show
         width: "100%", //100%
-        height: "100px", //Antes era 7rem
+        height: "90px", //Antes era 7rem
       },
       ".swiper-pagination": {
         "&.swiper-pagination-fraction": {
