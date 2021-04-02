@@ -20,7 +20,7 @@ const App = () => (
               breakpoints: {
                  // when window width is >= 320px
                   320: {
-                    slidesPerView: 2.45,
+                    slidesPerView: 2.44,
                     spaceBetween: 12,
                   },
                   // when window width is >= 360px
@@ -30,7 +30,7 @@ const App = () => (
                   },
                   // when window width is >= 375px
                   375: {
-                    slidesPerView: 2.76,
+                    slidesPerView: 2.77,
                     spaceBetween: 12,
                   },
                   // when window width is >= 390px
@@ -45,7 +45,7 @@ const App = () => (
                   },
                   // when window width is >= 414px
                   414: {
-                    slidesPerView: 3.08,
+                    slidesPerView: 3.06,
                     spaceBetween: 12,
                   },
                   // when window width is >= 430px
@@ -86,6 +86,16 @@ const App = () => (
                   // when window width is >= 500px
                   500: {
                     slidesPerView: 3.69,
+                    spaceBetween: 12
+                  },
+                   // when window width is >= 520px
+                   520: {
+                    slidesPerView: 3.76,
+                    spaceBetween: 12
+                  },
+                  // when window width is >= 540px
+                  540: {
+                    slidesPerView: 3.77,
                     spaceBetween: 12
                   }
               },
