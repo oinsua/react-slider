@@ -22,7 +22,7 @@ export const swiperStyle = css`
     padding: 0;
     /* Fix of Webkit flickering */
     z-index: 1;
-    max-width: 500px;
+    max-width: 540px;
     min-width: 320px; 
   }
 

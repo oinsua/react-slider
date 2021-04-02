@@ -90,14 +90,19 @@ const App = () => (
                   },
                    // when window width is >= 520px
                    520: {
-                    slidesPerView: 3.76,
+                    slidesPerView: 3.84,
                     spaceBetween: 12
                   },
                   // when window width is >= 540px
                   540: {
-                    slidesPerView: 3.77,
+                    slidesPerView: 3.98,
                     spaceBetween: 12
-                  }
+                  },
+                  // when window width is >= 542px
+                  542: {
+                    slidesPerView: 4,
+                    spaceBetween: 12
+                  },
               },
             }
           }
