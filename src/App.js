@@ -38,6 +38,11 @@ const App = () => (
                     slidesPerView: 2.88,
                     spaceBetween: 12,
                   },
+                  // when window width is >= 411px
+                  411: {
+                    slidesPerView: 3.04,
+                    spaceBetween: 12,
+                  },
                   // when window width is >= 414px
                   414: {
                     slidesPerView: 3.08,
