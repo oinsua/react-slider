@@ -1,14 +1,9 @@
 import React from "react";
-import {ThemeProvider } from '@emotion/react'
-import { theme, globalStyles } from "./utils/stylesConfig";
-import { Global } from "@emotion/core";
 import Slider from "./pages/Slider";
-import './App.css'; 
+import './App.scss'; 
 
 const App = () => (
-  <ThemeProvider theme={theme}>
     <> 
-      <Global styles={globalStyles} />
       <Slider
             params={{ 
               grabCursor: true,
@@ -108,7 +103,6 @@ const App = () => (
           }
           />
     </>
-  </ThemeProvider>
 );
 
 export default App;
